@@ -326,12 +326,12 @@
 				<div id = "estimate" class = "float header1-elem">Request Estimate</div>
 			</div>	
 			<div id = "nav">
-				<a href = "#sub-where" class = "nav-link" >Air Conditioning</a>
-				<a href = "#review-subheader" class = "nav-link" >Heating</a>
-				<a href = "#LMH" class = "nav-link" >Commercial</a>
-				<a href = "#LMC" class = "nav-link" >Maintenance Program</a>
-				<div class = "nav-link">About Us</div>
-				<div class = "nav-link">Contact Us</div>
+				<a href = "#" class = "nav-link"  id = "AC-link">Air Conditioning</a>
+				<a href = "#" class = "nav-link" id = "Heating-link">Heating</a>
+				<a href = "#" class = "nav-link" id = "commercial-link">Commercial</a>
+				<a href = "#" class = "nav-link" id = "maintenance-link">Maintenance Program</a>
+				<div class = "nav-link" >About Us</div>
+				<div class = "nav-link" >Contact Us</div>
 			</div>
 		</div>
 		<div id = "landing">
@@ -360,7 +360,8 @@
 			</div>
 			<div class = "about-elem" id = "right">
 				<div class = "about-header" id ="where">Serving the Dallas area</div>
-				<div class = "about-subheader" id = "sub-where"> 
+				<div class = "about-subheader" id = "sub-where">
+					<a name = "AC-loc"/> 
 					<div class = "float">Request Estimate</div>
 					<div class = "float" id = "arrow">
 						<i class="right"></i>
@@ -368,7 +369,6 @@
 				</div>
 			</div>
 		</div>
-		<a id = "AC-link">
 		<div id = "air-conditioning">
 			<div id = "service-text">Air Conditioning</div>
 			<p class = "descr">CityLine Air Conditioning has the air conditioning solutions you need, and we also provide excellent financing options and accept all major credit cards. Whether it’s a quick AC repair, a possible system replacement, or a routine maintenance session, we will make sure you are satisfied with the work we do.</p>
@@ -377,6 +377,7 @@
 		<div id = "reviews">
 			<div id = "review-elem" class = "float">
 				<div class = "rp-header">5.00 Average Star Rating</div>
+				<a name = "Heating-loc"/> 
 				<div id = "review-subheader">52 verified Recommend Me Reviews</div>
 			</div>	
 			<div id = "HA-imgs">
@@ -413,6 +414,7 @@
 							<i class="right"></i>
 						</div>
 					</div>	
+					<a name = "commercial-loc"/>
 				</div>
 			</div>	
 		</div>
@@ -420,6 +422,7 @@
 			<div id = "service-text">Commercial</div>
 			<p class = "descr">We are happy to help you find commercial heating and cooling solutions for any make and model of rooftop unit, furnace, central split air conditioner, and more. The best way to keep your commercial HVAC equipment running smoothly is with routine maintenance services from an expert technician. A thorough cleaning, tune–up, and inspection can keep problems at bay, or you can catch problems early to make repairs before they become a serious issue.</p>
 			<div class = "learn-more" id = "LMC">Learn More</div>
+			<a name = "maintenance-loc"/>
 		</div>
 		<div id = "maintenance-program">
 			<div id = "service-text">Maintenance Program</div>
@@ -430,7 +433,24 @@
 
 
 	<script type="text/javascript">
+		function scrollToAnchor(aid){
+    		var aTag = $("a[name='"+ aid +"']");
+    		$('html,body').animate({scrollTop: aTag.offset().top},'slow');
+		}
 
+		$("#AC-link").click(function() {
+   			scrollToAnchor('AC-loc');
+		});
+
+		$("#Heating-link").click(function() {
+   			scrollToAnchor('Heating-loc');
+		});
+		$("#commercial-link").click(function() {
+   			scrollToAnchor('commercial-loc');
+		});
+		$("#maintenance-link").click(function() {
+   			scrollToAnchor('maintenance-loc');
+		});
 
 	</script>	
 </html>
